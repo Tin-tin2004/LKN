@@ -67,7 +67,7 @@ li, a {
     width: 100px;
     height: auto;
     cursor: pointer;
-    background-image: url('lakan/1.png');
+    background-image: url('leftButton.png');
     background-size: contain;
     background-position: left;
     margin-right: 10px;
