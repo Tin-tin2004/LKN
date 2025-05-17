@@ -51,20 +51,27 @@ li, a {
     width: 100%;
     height: auto;
     max-height: 600px; 
-    object-fit: cover; 
+    object-fit:cover; 
     display: block;
 
 }
 
 .hotdeals_slides {
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.leftbutton {
-  width: 100px;
-  height: auto;
-  border: none;
-  cursor: pointer;
+.leftButton {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    background-image: url('lakan/1.png');
+    background-size: contain;
+    background-position: left;
+    margin-right: 10px;
+    border: none;
+    position: absolute;
+    transform: translateX(-50%);
 }
