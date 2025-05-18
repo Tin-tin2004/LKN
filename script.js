@@ -60,3 +60,11 @@ setInterval(() => {
     updateSlidePosition();
     updateIndicators(currentSlide);
 }, 3000);
+
+// Redirect to makeOrder.html when Shop Now button is clicked
+const shopNowBtn = document.querySelector('.shopnowButton');
+if (shopNowBtn) {
+    shopNowBtn.addEventListener('click', () => {
+        window.location.href = 'Buy.html';
+    });
+}
