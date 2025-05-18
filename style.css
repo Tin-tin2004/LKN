@@ -44,6 +44,7 @@ li, a {
 
 .hotdeals{
     margin-top: -10px;
+    position: relative;
 }
 
 .hotdeals_slides {
@@ -66,25 +67,17 @@ li, a {
     top: 50%;
     width: 50px;
     height: 50;
-    font-size: 2.3rem; 
+    font-size: 4.3rem; 
+    color: white;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
-    background-color:darkgray;
+    background-color:transparent;
     border-radius: 50%;
     opacity: 0.5;
-}
-
-.slides_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
 }
 
 .slides-container {
@@ -94,6 +87,8 @@ li, a {
     overflow: hidden;
     padding: 0;
     margin: 0;
+    animation: transition 10s infinite;
+    animation-fill-mode: forwards;
 }
 
 .slides-container img {
@@ -108,7 +103,7 @@ li, a {
 .slides {
     min-width: 100vw;  
     max-width: 100vw;
-    height: 75vh;     
+    height: 90vh;     
     display: none;
     align-items: center;
     justify-content: center;
@@ -132,21 +127,52 @@ li, a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px; /* Adjust as needed to overlap the image nicely */
+    margin: 0 auto;
     gap: 10px;
+    z-index: 2;
+    pointer-events: auto;
 }
 
 .carousel-indicators .indicator {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: #bbb;
+    background: transparent;
+    border: 2px solid #DCDCDC;
+    opacity: 0.5;
     display: inline-block;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .carousel-indicators .indicator.active {
-    background: #333;
+    background: #A9A9A9;
+    opacity: 1;
 }
 
+.shopnowButton {
+    position: absolute;
+    background-color: #A9A9A9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.shopnowButton:hover {
+    background-color: #808080; /* Darker shade on hover */
+}
+.shopnowButton:active {
+    background-color: #696969; /* Even darker shade on click */
+}

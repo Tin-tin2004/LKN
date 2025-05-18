@@ -53,3 +53,10 @@ indicators.forEach((dot, i) => {
 // Initialize carousel
 updateSlidePosition();
 updateIndicators(currentSlide);
+
+// Auto-slide every 3 seconds
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlidePosition();
+    updateIndicators(currentSlide);
+}, 3000);
