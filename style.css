@@ -54,26 +54,28 @@ li, a {
 }
 
 .leftButton {
-    left: 10px;
+    left: 15px;
 }
 .rightButton {
-    right: 10px;
+    right: 15px;
     
 }
 
 .leftButton, .rightButton {
     position: absolute;
     top: 50%;
-    width: 90px;
-    height: 90px;
-    font-size: 3rem; 
+    width: 50px;
+    height: 50;
+    font-size: 2.3rem; 
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
-    background-color: transparent;
+    background-color:darkgray;
+    border-radius: 50%;
+    opacity: 0.5;
 }
 
 .slides_container {
@@ -107,7 +109,7 @@ li, a {
     min-width: 100vw;  
     max-width: 100vw;
     height: 75vh;     
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     list-style: none;
@@ -121,7 +123,30 @@ li, a {
 }
 
 .slides.active {
-    display: block; 
+    display: flex; 
     opacity: 1;
+}
+
+/* Add to your style.css */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.carousel-indicators .indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #bbb;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-indicators .indicator.active {
+    background: #333;
 }
 
