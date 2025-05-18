@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+li, a {
+    font-family: "Signika", sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 100;
+    list-style: none;
+}
+
+.logo{
+    padding-top: 10px;
+    width: 10%;
+    padding-bottom: 20px;
+
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0efef;
+}
+
+.links{
+    display: flex;
+    padding-left: 50px;
+    gap: 25px;
+    padding-top: 10px;
+}
+
+.accessability, img{
+    display: flex;
+    padding-top: 10px;
+    width: 20%;
+}
+
+.hotdeals{
+    margin-top: -10px;
+    position: relative;
+}
+
+.hotdeals_slides {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.leftButton {
+    left: 15px;
+}
+.rightButton {
+    right: 15px;
+    
+}
+
+.leftButton, .rightButton {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50;
+    font-size: 4.3rem; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    background-color:transparent;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100vw;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    animation: transition 10s infinite;
+    animation-fill-mode: forwards;
+}
+
+.slides-container img {
+    width: 600px;      /* Set your desired fixed width */
+    height: 400px;     /* Set your desired fixed height */
+    object-fit: cover; /* Ensures the image covers the area */
+    max-width: 100%;   /* Responsive for smaller screens */
+    display: block;
+    margin: 0 auto;
+}
+
+.slides {
+    min-width: 100vw;  
+    max-width: 100vw;
+    height: 90vh;     
+    display: none;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slides.active {
+    display: flex; 
+    opacity: 1;
+}
+
+/* Add to your style.css */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px; /* Adjust as needed to overlap the image nicely */
+    margin: 0 auto;
+    gap: 10px;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.carousel-indicators .indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #DCDCDC;
+    opacity: 0.5;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-indicators .indicator.active {
+    background: #A9A9A9;
+    opacity: 1;
+}
+
+.shopnowButton {
+    position: absolute;
+    background-color: white;
+    color: black;
+    border: none;
+    /* padding: 25px 25px; */
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 35px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 3;
+    font-weight: bold;
+}
+
+.shopnowButton:hover {
+    background-color: #aba9a9; /* Darker shade on hover */
+}
+.shopnowButton:active {
+    background-color: #696969; /* Even darker shade on click */
+}
