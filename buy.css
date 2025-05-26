@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+li, a {
+    font-family: "Signika", sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 100;
+    list-style: none;
+}
+
+.logo{
+    padding-top: 10px;
+    width: 10%;
+    padding-bottom: 20px;
+
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0efef;
+}
+
+.links{
+    display: flex;
+    padding-left: 50px;
+    gap: 25px;
+    padding-top: 10px;
+}
+
+.accessability, img{
+    display: flex;
+    padding-top: 10px;
+    width: 20%;
+}
